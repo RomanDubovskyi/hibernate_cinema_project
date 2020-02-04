@@ -27,7 +27,7 @@ public class CinemaHallServiceImpl implements CinemaHallService {
         try {
             return cinemaHallDao.getAll();
         } catch (DataProcessingException e) {
-            LOGGER.error("Can't get all Halls" + e);
+            LOGGER.error("Can't get all halls", e);
             throw new RuntimeException();
         }
     }

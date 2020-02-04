@@ -19,7 +19,7 @@ public class Main {
         movie.setTitle("Fast and Furious");
         MovieService movieService = (MovieService) injector.getInstance(MovieService.class);
         movieService.add(movie);
-        //movieService.getAll().forEach(System.out::println);
+        movieService.getAll().forEach(System.out::println);
 
         CinemaHallService cinemaHallService =
                 (CinemaHallService) injector.getInstance(CinemaHallService.class);
@@ -27,7 +27,7 @@ public class Main {
         cinemaHall.setCapacity(100);
         cinemaHall.setDescription("Premium Hall");
         cinemaHallService.add(cinemaHall);
-        //System.out.println(cinemaHallService.getAll());
+        System.out.println(cinemaHallService.getAll());
 
         MovieSession movieSession = new MovieSession();
         movieSession.setShowTime(LocalDateTime.now());
