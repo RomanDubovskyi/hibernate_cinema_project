@@ -8,7 +8,6 @@ import com.dev.cinema.model.MovieSession;
 import com.dev.cinema.service.MovieSessionService;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -21,18 +20,12 @@ public class MovieSessionServiceImpl implements MovieSessionService {
 
     @Override
     public List<MovieSession> findAvailableSessions(Long movieId, LocalDate date) {
-        List<MovieSession> result = new ArrayList<>();
         try {
-            for (MovieSession movieSession : movieSessionDao.getAll()) {
-                if (movieSession.getShowTime().toLocalDate().equals(date)
-                        && movieSession.getMovie().getId().equals(movieId)) {
-                    result.add(movieSession);
-                }
-            }
+            return movieSessionDao.findAvailableSessions(movieId, date);
         } catch (DataProcessingException e) {
-            LOGGER.error("Can't get Sessions according to provided parameters " + e);
+            LOGGER.error("Can't get MovieSessions with provided" + e);
+            throw new RuntimeException();
         }
-        return result;
     }
 
     @Override
