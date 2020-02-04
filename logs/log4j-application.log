@@ -1529,3 +1529,368 @@
 2020-02-03 15:06:13 DEBUG TwoPhaseLoad:221 - Attribute (`title`)  - enhanced for lazy-loading? - false
 2020-02-03 15:06:13 DEBUG TwoPhaseLoad:342 - Done materializing entity [com.dev.cinema.model.Movie#1]
 2020-02-03 15:06:13 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2020-02-03 15:44:49 DEBUG logging:28 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2020-02-03 15:44:49 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2020-02-03 15:44:49 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+2020-02-03 15:44:49 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2020-02-03 15:44:49 INFO  Version:46 - HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-03 15:44:49 DEBUG Environment:199 - HHH000206: hibernate.properties not found
+2020-02-03 15:44:49 DEBUG JaxbCfgProcessor:116 - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+2020-02-03 15:44:50 DEBUG Configuration:722 - Building session factory using internal StandardServiceRegistryBuilder
+2020-02-03 15:44:50 DEBUG ServiceBinding:68 - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+2020-02-03 15:44:50 DEBUG Configuration:652 - Building session factory using provided StandardServiceRegistry
+2020-02-03 15:44:50 DEBUG RegionFactoryInitiator:118 - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+2020-02-03 15:44:50 DEBUG RegionFactoryInitiator:49 - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2020-02-03 15:44:50 INFO  Version:49 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration boolean -> org.hibernate.type.BooleanType@eda25e5
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration boolean -> org.hibernate.type.BooleanType@eda25e5
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@eda25e5
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@6fe1b4fb
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@13d73fa
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration yes_no -> org.hibernate.type.YesNoType@1e0f9063
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration byte -> org.hibernate.type.ByteType@1199fe66
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration byte -> org.hibernate.type.ByteType@1199fe66
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@1199fe66
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration character -> org.hibernate.type.CharacterType@cd1d761
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration char -> org.hibernate.type.CharacterType@cd1d761
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@cd1d761
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration short -> org.hibernate.type.ShortType@906d29b
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration short -> org.hibernate.type.ShortType@906d29b
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@906d29b
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration integer -> org.hibernate.type.IntegerType@57abad67
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration int -> org.hibernate.type.IntegerType@57abad67
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@57abad67
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration long -> org.hibernate.type.LongType@2dca0d64
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration long -> org.hibernate.type.LongType@2dca0d64
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@2dca0d64
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration float -> org.hibernate.type.FloatType@1cdc4c27
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration float -> org.hibernate.type.FloatType@1cdc4c27
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@1cdc4c27
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration double -> org.hibernate.type.DoubleType@628c4ac0
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration double -> org.hibernate.type.DoubleType@628c4ac0
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@628c4ac0
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@62e20a76
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@62e20a76
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@75cd8043
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@75cd8043
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration string -> org.hibernate.type.StringType@305a0c5f
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.String -> org.hibernate.type.StringType@305a0c5f
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@232a7d73
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@42721fe
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration url -> org.hibernate.type.UrlType@28e8dde3
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@28e8dde3
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration Duration -> org.hibernate.type.DurationType@17a1e4ca
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@17a1e4ca
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration Instant -> org.hibernate.type.InstantType@59252cb6
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@59252cb6
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@1d730606
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@1d730606
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@6b3e12b5
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@6b3e12b5
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@fade1fc
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@fade1fc
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@2e8e8225
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@2e8e8225
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@39a8312f
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@39a8312f
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@5911e990
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@5911e990
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration date -> org.hibernate.type.DateType@2dd80673
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@2dd80673
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration time -> org.hibernate.type.TimeType@7216fb24
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@7216fb24
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration timestamp -> org.hibernate.type.TimestampType@6622fc65
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@6622fc65
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@6622fc65
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@158a3b2e
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration calendar -> org.hibernate.type.CalendarType@615091b8
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@615091b8
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@615091b8
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@19648c40
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration locale -> org.hibernate.type.LocaleType@6f152006
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@6f152006
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration currency -> org.hibernate.type.CurrencyType@4b2a01d4
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@4b2a01d4
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@4983159f
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@4983159f
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration class -> org.hibernate.type.ClassType@18bc345
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@18bc345
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@a43ce46
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@a43ce46
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@2320fa6f
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration binary -> org.hibernate.type.BinaryType@7e7b159b
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration byte[] -> org.hibernate.type.BinaryType@7e7b159b
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration [B -> org.hibernate.type.BinaryType@7e7b159b
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@2dd29a59
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@2dd29a59
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@2dd29a59
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration row_version -> org.hibernate.type.RowVersionType@2d36e77e
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration image -> org.hibernate.type.ImageType@2c7b5824
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration characters -> org.hibernate.type.CharArrayType@5c08c46a
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration char[] -> org.hibernate.type.CharArrayType@5c08c46a
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration [C -> org.hibernate.type.CharArrayType@5c08c46a
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@c35172e
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@c35172e
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@c35172e
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration text -> org.hibernate.type.TextType@61ce23ac
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration ntext -> org.hibernate.type.NTextType@7f6f61c8
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration blob -> org.hibernate.type.BlobType@2cc3ad05
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@2cc3ad05
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@c055c54
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration clob -> org.hibernate.type.ClobType@77d2e85
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@77d2e85
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration nclob -> org.hibernate.type.NClobType@54e22bdd
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@54e22bdd
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@2e61d218
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@2e554a3b
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration serializable -> org.hibernate.type.SerializableType@704f1591
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration object -> org.hibernate.type.ObjectType@52d239ba
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@52d239ba
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@2f05be7f
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@640f11a1
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@5c10f1c3
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@7ac2e39b
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@78365cfa
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@64a8c844
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@3f6db3fb
+2020-02-03 15:44:50 DEBUG BasicTypeRegistry:156 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@52de51b6
+2020-02-03 15:44:50 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2020-02-03 15:44:50 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2020-02-03 15:44:50 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2020-02-03 15:44:50 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2020-02-03 15:44:50 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2020-02-03 15:44:50 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2020-02-03 15:44:50 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2020-02-03 15:44:50 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2020-02-03 15:44:50 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2020-02-03 15:44:50 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2020-02-03 15:44:50 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2020-02-03 15:44:50 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2020-02-03 15:44:50 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2020-02-03 15:44:50 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2020-02-03 15:44:50 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2020-02-03 15:44:50 INFO  pooling:115 - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/cinema?serverTimezone=UTC]
+2020-02-03 15:44:50 INFO  pooling:121 - HHH10001001: Connection properties: {password=roman, user=root}
+2020-02-03 15:44:50 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2020-02-03 15:44:50 DEBUG DriverManagerConnectionProviderImpl:384 - Initializing Connection pool with 1 Connections
+2020-02-03 15:44:50 INFO  DriverManagerConnectionProviderImpl:249 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2020-02-03 15:44:51 DEBUG JdbcEnvironmentInitiator:72 - Database ->
+       name : MySQL
+    version : 8.0.19
+      major : 8
+      minor : 0
+2020-02-03 15:44:51 DEBUG JdbcEnvironmentInitiator:83 - Driver ->
+       name : MySQL Connector/J
+    version : mysql-connector-java-8.0.19 (Revision: a0ca826f5cdf51a98356fdfb1bf251eb042f80bf)
+      major : 8
+      minor : 0
+2020-02-03 15:44:51 DEBUG JdbcEnvironmentInitiator:389 - JDBC version : 4.2
+2020-02-03 15:44:51 INFO  Dialect:172 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-03 15:44:51 DEBUG IdentifierHelperBuilder:113 - JDBC driver metadata reported database stores quoted identifiers in more than one case
+2020-02-03 15:44:51 DEBUG IdentifierHelperBuilder:187 - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [LOWER]; that will likely lead to problems in schema update and validation if using quoted identifiers
+2020-02-03 15:44:51 DEBUG Namespace:51 - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+2020-02-03 15:44:51 DEBUG TypeConfiguration$Scope:152 - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@29182679] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@57bd802b]
+2020-02-03 15:44:51 DEBUG AnnotationBinder:557 - Binding entity from annotated class: com.dev.cinema.model.Movie
+2020-02-03 15:44:51 DEBUG Ejb3Column:213 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2020-02-03 15:44:51 DEBUG EntityBinder:430 - Import with entity name Movie
+2020-02-03 15:44:51 DEBUG EntityBinder:873 - Bind entity com.dev.cinema.model.Movie on table Movie
+2020-02-03 15:44:51 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Movie), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2020-02-03 15:44:51 DEBUG PropertyBinder:175 - MetadataSourceProcessor property id with lazy=false
+2020-02-03 15:44:51 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [com.dev.cinema.model.Movie:id]
+2020-02-03 15:44:51 DEBUG SimpleValueBinder:411 - building SimpleValue for id
+2020-02-03 15:44:51 DEBUG PropertyBinder:266 - Building property id
+2020-02-03 15:44:51 DEBUG BinderHelper:644 - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, identity, , ...)
+2020-02-03 15:44:51 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Movie), mappingColumn=description, insertable=true, updatable=true, unique=false}
+2020-02-03 15:44:51 DEBUG PropertyBinder:175 - MetadataSourceProcessor property description with lazy=false
+2020-02-03 15:44:51 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [com.dev.cinema.model.Movie:description]
+2020-02-03 15:44:51 DEBUG SimpleValueBinder:411 - building SimpleValue for description
+2020-02-03 15:44:51 DEBUG PropertyBinder:266 - Building property description
+2020-02-03 15:44:51 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(Movie), mappingColumn=title, insertable=true, updatable=true, unique=false}
+2020-02-03 15:44:51 DEBUG PropertyBinder:175 - MetadataSourceProcessor property title with lazy=false
+2020-02-03 15:44:51 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [com.dev.cinema.model.Movie:title]
+2020-02-03 15:44:51 DEBUG SimpleValueBinder:411 - building SimpleValue for title
+2020-02-03 15:44:51 DEBUG PropertyBinder:266 - Building property title
+2020-02-03 15:44:51 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for id
+2020-02-03 15:44:51 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for description
+2020-02-03 15:44:51 DEBUG SimpleValueBinder:456 - Starting fillSimpleValue for title
+2020-02-03 15:44:51 DEBUG PrimaryKey:35 - Forcing column [id] to be non-null as it is part of the primary key for table [movie]
+2020-02-03 15:44:51 DEBUG SessionFactoryImpl:207 - Building session factory
+2020-02-03 15:44:51 DEBUG Settings:68 - SessionFactory name : null
+2020-02-03 15:44:51 DEBUG Settings:69 - Automatic flush during beforeCompletion(): enabled
+2020-02-03 15:44:51 DEBUG Settings:70 - Automatic session close at end of transaction: disabled
+2020-02-03 15:44:51 DEBUG Settings:72 - Statistics: disabled
+2020-02-03 15:44:51 DEBUG Settings:74 - Deleted entity synthetic identifier rollback: disabled
+2020-02-03 15:44:51 DEBUG Settings:75 - Default entity-mode: pojo
+2020-02-03 15:44:51 DEBUG Settings:76 - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2020-02-03 15:44:51 DEBUG Settings:77 - Allow initialization of lazy state outside session : disabled
+2020-02-03 15:44:51 DEBUG Settings:79 - Using BatchFetchStyle : LEGACY
+2020-02-03 15:44:51 DEBUG Settings:80 - Default batch fetch size: -1
+2020-02-03 15:44:51 DEBUG Settings:81 - Maximum outer join fetch depth: 2
+2020-02-03 15:44:51 DEBUG Settings:82 - Default null ordering: NONE
+2020-02-03 15:44:51 DEBUG Settings:83 - Order SQL updates by primary key: disabled
+2020-02-03 15:44:51 DEBUG Settings:84 - Order SQL inserts for batching: disabled
+2020-02-03 15:44:51 DEBUG Settings:86 - multi-tenancy strategy : NONE
+2020-02-03 15:44:51 DEBUG Settings:88 - JTA Track by Thread: enabled
+2020-02-03 15:44:51 DEBUG Settings:90 - Query language substitutions: {}
+2020-02-03 15:44:51 DEBUG Settings:91 - Named query checking : enabled
+2020-02-03 15:44:51 DEBUG Settings:93 - Second-level cache: disabled
+2020-02-03 15:44:51 DEBUG Settings:94 - Second-level query cache: disabled
+2020-02-03 15:44:51 DEBUG Settings:95 - Second-level query cache factory: null
+2020-02-03 15:44:51 DEBUG Settings:96 - Second-level cache region prefix: null
+2020-02-03 15:44:51 DEBUG Settings:97 - Optimize second-level cache for minimal puts: disabled
+2020-02-03 15:44:51 DEBUG Settings:98 - Structured second-level cache entries: disabled
+2020-02-03 15:44:51 DEBUG Settings:99 - Second-level cache direct-reference entries: disabled
+2020-02-03 15:44:51 DEBUG Settings:100 - Automatic eviction of collection cache: disabled
+2020-02-03 15:44:51 DEBUG Settings:102 - JDBC batch size: 15
+2020-02-03 15:44:51 DEBUG Settings:103 - JDBC batch updates for versioned data: enabled
+2020-02-03 15:44:51 DEBUG Settings:104 - Scrollable result sets: enabled
+2020-02-03 15:44:51 DEBUG Settings:105 - Wrap result sets: disabled
+2020-02-03 15:44:51 DEBUG Settings:106 - JDBC3 getGeneratedKeys(): enabled
+2020-02-03 15:44:51 DEBUG Settings:107 - JDBC result set fetch size: null
+2020-02-03 15:44:51 DEBUG Settings:108 - Connection release mode: AFTER_TRANSACTION
+2020-02-03 15:44:51 DEBUG Settings:109 - Generate SQL with comments: disabled
+2020-02-03 15:44:51 DEBUG Settings:111 - JPA compliance - query : disabled
+2020-02-03 15:44:51 DEBUG Settings:112 - JPA compliance - closed-handling : disabled
+2020-02-03 15:44:51 DEBUG Settings:113 - JPA compliance - lists : disabled
+2020-02-03 15:44:51 DEBUG Settings:114 - JPA compliance - transactions : disabled
+2020-02-03 15:44:51 DEBUG SessionFactoryImpl:262 - Session factory constructed with filter configurations : {}
+2020-02-03 15:44:51 DEBUG SessionFactoryImpl:263 - Instantiating session factory with properties: {sun.desktop=windows, awt.toolkit=sun.awt.windows.WToolkit, dialect=org.hibernate.dialect.MySQL5Dialect, java.specification.version=11, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1251, hibernate.dialect=org.hibernate.dialect.MySQL5Dialect, java.class.path=C:\Users\admin\Desktop\HW_Mate_from_Shop\cinema_project\target\classes;C:\Users\admin\.m2\repository\org\hibernate\hibernate-core\5.4.10.Final\hibernate-core-5.4.10.Final.jar;C:\Users\admin\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\admin\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\admin\.m2\repository\org\javassist\javassist\3.24.0-GA\javassist-3.24.0-GA.jar;C:\Users\admin\.m2\repository\net\bytebuddy\byte-buddy\1.10.2\byte-buddy-1.10.2.jar;C:\Users\admin\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\admin\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\admin\.m2\repository\org\jboss\jandex\2.1.1.Final\jandex-2.1.1.Final.jar;C:\Users\admin\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\admin\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\admin\.m2\repository\org\dom4j\dom4j\2.1.1\dom4j-2.1.1.jar;C:\Users\admin\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.0.Final\hibernate-commons-annotations-5.1.0.Final.jar;C:\Users\admin\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\admin\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\admin\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\admin\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\admin\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\admin\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;C:\Users\admin\.m2\repository\mysql\mysql-connector-java\8.0.19\mysql-connector-java-8.0.19.jar;C:\Users\admin\.m2\repository\com\google\protobuf\protobuf-java\3.6.1\protobuf-java-3.6.1.jar;C:\Users\admin\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar, java.vm.vendor=JetBrains s.r.o, sun.arch.data.model=64, hbm2ddl.auto=create-drop, user.variant=, java.vendor.url=https://www.jetbrains.com/, user.timezone=Europe/Helsinki, os.name=Windows 10, java.vm.specification.version=11, sun.java.launcher=SUN_STANDARD, user.country=RU, sun.boot.library.path=D:\IntelliJ IDEA 2019.3.1\jbr\bin, sun.java.command=com.dev.cinema.Main, jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\admin, user.language=ru, java.specification.vendor=Oracle Corporation, java.version.date=2019-10-15, java.home=D:\IntelliJ IDEA 2019.3.1\jbr, file.separator=\, java.vm.compressedOopsMode=32-bit, line.separator=
+, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, hibernate.hbm2ddl.auto=create-drop, user.script=, connection.password=roman, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=11.0.5+10-b520.17, user.name=admin, path.separator=;, hibernate.connection.username=****, os.version=10.0, java.runtime.name=OpenJDK Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost:3306/cinema?serverTimezone=UTC, file.encoding=UTF-8, java.vm.name=OpenJDK 64-Bit Server VM, hibernate.show_sql=true, show_sql=true, hibernate.connection.driver_class=com.mysql.cj.jdbc.Driver, java.vendor.url.bug=https://youtrack.jetbrains.com, java.io.tmpdir=C:\Users\admin\AppData\Local\Temp\, java.version=11.0.5, user.dir=C:\Users\admin\Desktop\HW_Mate_from_Shop\cinema_project, os.arch=amd64, connection.username=root, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.awt.windows.WPrinterJob, hibernate.connection.password=****, sun.os.patch.level=, connection.driver_class=com.mysql.cj.jdbc.Driver, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@72d0f2b4, java.library.path=D:\IntelliJ IDEA 2019.3.1\jbr\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Git\cmd;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;;D:\IntelliJ IDEA 2019.3.1\bin;;., java.vendor=JetBrains s.r.o, java.vm.info=mixed mode, sharing, java.vm.version=11.0.5+10-b520.17, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeLittle, connection.url=jdbc:mysql://localhost:3306/cinema?serverTimezone=UTC, java.class.version=55.0}
+2020-02-03 15:44:51 DEBUG JaccIntegrator:80 - Skipping JACC integration as it was not enabled
+2020-02-03 15:44:51 DEBUG SessionFactoryImpl:302 - Instantiated session factory
+2020-02-03 15:44:51 DEBUG TypeConfiguration$Scope:157 - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@29182679] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@664e5dee]
+2020-02-03 15:44:51 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [com.dev.cinema.model.Movie] is safe
+2020-02-03 15:44:51 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.dev.cinema.model.Movie
+2020-02-03 15:44:51 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [com.dev.cinema.model.Movie] is safe
+2020-02-03 15:44:51 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.dev.cinema.model.Movie
+2020-02-03 15:44:52 DEBUG AbstractEntityPersister:3847 - Static SQL for entity: com.dev.cinema.model.Movie
+2020-02-03 15:44:52 DEBUG AbstractEntityPersister:3852 -  Version select: select id from Movie where id =?
+2020-02-03 15:44:52 DEBUG AbstractEntityPersister:3855 -  Snapshot select: select movie_.id, movie_.description as descript2_0_, movie_.title as title3_0_ from Movie movie_ where movie_.id=?
+2020-02-03 15:44:52 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into Movie (description, title, id) values (?, ?, ?)
+2020-02-03 15:44:52 DEBUG AbstractEntityPersister:394 -  Update 0: update Movie set description=?, title=? where id=?
+2020-02-03 15:44:52 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from Movie where id=?
+2020-02-03 15:44:52 DEBUG AbstractEntityPersister:3863 -  Identity insert: insert into Movie (description, title) values (?, ?)
+2020-02-03 15:44:52 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@358ab600]
+2020-02-03 15:44:52 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : description
+2020-02-03 15:44:52 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : title
+2020-02-03 15:44:52 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2020-02-03 15:44:52 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2020-02-03 15:44:52 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.dev.cinema.model.Movie)
+    - Returns
+       - EntityReturnImpl(entity=com.dev.cinema.model.Movie, querySpaceUid=<gen:0>, path=com.dev.cinema.model.Movie)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.dev.cinema.model.Movie)
+          - SQL table alias mapping - movie0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2020-02-03 15:44:52 DEBUG EntityLoader:137 - Static select for entity com.dev.cinema.model.Movie [NONE]: select movie0_.id as id1_0_0_, movie0_.description as descript2_0_0_, movie0_.title as title3_0_0_ from Movie movie0_ where movie0_.id=?
+2020-02-03 15:44:52 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@78e17a99]
+2020-02-03 15:44:52 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : description
+2020-02-03 15:44:52 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : title
+2020-02-03 15:44:52 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2020-02-03 15:44:52 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2020-02-03 15:44:52 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.dev.cinema.model.Movie)
+    - Returns
+       - EntityReturnImpl(entity=com.dev.cinema.model.Movie, querySpaceUid=<gen:0>, path=com.dev.cinema.model.Movie)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.dev.cinema.model.Movie)
+          - SQL table alias mapping - movie0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2020-02-03 15:44:52 DEBUG EntityLoader:137 - Static select for entity com.dev.cinema.model.Movie [READ]: select movie0_.id as id1_0_0_, movie0_.description as descript2_0_0_, movie0_.title as title3_0_0_ from Movie movie0_ where movie0_.id=?
+2020-02-03 15:44:52 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity com.dev.cinema.model.Movie: select movie0_.id as id1_0_0_, movie0_.description as descript2_0_0_, movie0_.title as title3_0_0_ from Movie movie0_ where movie0_.id=?
+2020-02-03 15:44:52 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity com.dev.cinema.model.Movie: select movie0_.id as id1_0_0_, movie0_.description as descript2_0_0_, movie0_.title as title3_0_0_ from Movie movie0_ where movie0_.id=?
+2020-02-03 15:44:52 DEBUG SQL:127 - drop table if exists Movie
+2020-02-03 15:44:52 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4d3c6593] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-03 15:44:52 DEBUG SQL:127 - create table Movie (id bigint not null auto_increment, description varchar(255), title varchar(255), primary key (id)) engine=MyISAM
+2020-02-03 15:44:52 INFO  access:47 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@332bcab0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2020-02-03 15:44:52 DEBUG JtaPlatformInitiator:43 - No JtaPlatform was specified, checking resolver
+2020-02-03 15:44:52 DEBUG JtaPlatformResolverInitiator:33 - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+2020-02-03 15:44:52 DEBUG StandardJtaPlatformResolver:137 - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-03 15:44:52 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-03 15:44:52 DEBUG NamedQueryRepository:151 - Checking 0 named HQL queries
+2020-02-03 15:44:52 DEBUG NamedQueryRepository:167 - Checking 0 named SQL queries
+2020-02-03 15:44:52 DEBUG SessionFactoryRegistry:52 - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@3dc95b8b
+2020-02-03 15:44:52 DEBUG SessionFactoryRegistry:74 - Registering SessionFactory: 252ec240-f935-4556-9cd3-3c3e31c4437d (<unnamed>)
+2020-02-03 15:44:52 DEBUG SessionFactoryRegistry:81 - Not binding SessionFactory to JNDI, no JNDI name configured
+2020-02-03 15:44:52 DEBUG StatisticsInitiator:101 - Statistics initialized [enabled=false]
+2020-02-03 15:44:52 DEBUG TransactionImpl:53 - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2020-02-03 15:44:52 DEBUG TransactionImpl:81 - begin
+2020-02-03 15:44:52 DEBUG ActionQueue:281 - Executing identity-insert immediately
+2020-02-03 15:44:52 DEBUG SQL:127 - insert into Movie (description, title) values (?, ?)
+2020-02-03 15:44:52 DEBUG IdentifierGeneratorHelper:78 - Natively generated identity: 1
+2020-02-03 15:44:52 DEBUG ResourceRegistryStandardImpl:106 - HHH000387: ResultSet's statement was not registered
+2020-02-03 15:44:52 DEBUG TransactionImpl:98 - committing
+2020-02-03 15:44:52 DEBUG AbstractFlushingEventListener:139 - Processing flush-time cascades
+2020-02-03 15:44:52 DEBUG AbstractFlushingEventListener:192 - Dirty checking collections
+2020-02-03 15:44:52 DEBUG AbstractFlushingEventListener:113 - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2020-02-03 15:44:52 DEBUG AbstractFlushingEventListener:120 - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2020-02-03 15:44:52 DEBUG EntityPrinter:110 - Listing entities:
+2020-02-03 15:44:52 DEBUG EntityPrinter:117 - com.dev.cinema.model.Movie{description=null, id=1, title=Fast and Furious}
+2020-02-03 15:44:52 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2020-02-03 15:44:52 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
+2020-02-03 15:44:52 DEBUG CriteriaQueryImpl:299 - Rendered criteria query -> select generatedAlias0 from Movie as generatedAlias0
+2020-02-03 15:44:52 DEBUG QueryTranslatorFactoryInitiator:45 - QueryTranslatorFactory: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@3a3ed300
+2020-02-03 15:44:52 DEBUG QueryTranslatorImpl:288 - parse() - HQL: select generatedAlias0 from com.dev.cinema.model.Movie as generatedAlias0
+2020-02-03 15:44:52 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2020-02-03 15:44:52 DEBUG QueryTranslatorImpl:309 - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       +-[FROM] Node: 'from'
+       |  \-[RANGE] Node: 'RANGE'
+       |     +-[DOT] Node: '.'
+       |     |  +-[DOT] Node: '.'
+       |     |  |  +-[DOT] Node: '.'
+       |     |  |  |  +-[DOT] Node: '.'
+       |     |  |  |  |  +-[IDENT] Node: 'com'
+       |     |  |  |  |  \-[IDENT] Node: 'dev'
+       |     |  |  |  \-[IDENT] Node: 'cinema'
+       |     |  |  \-[IDENT] Node: 'model'
+       |     |  \-[IDENT] Node: 'Movie'
+       |     \-[ALIAS] Node: 'generatedAlias0'
+       \-[SELECT] Node: 'select'
+          \-[IDENT] Node: 'generatedAlias0'
+
+2020-02-03 15:44:52 DEBUG HqlSqlBaseWalker:124 - select << begin [level=1, statement=select]
+2020-02-03 15:44:52 DEBUG FromElement:149 - FromClause{level=1} : com.dev.cinema.model.Movie (generatedAlias0) -> movie0_
+2020-02-03 15:44:52 DEBUG FromReferenceNode:60 - Resolved : generatedAlias0 -> movie0_.id
+2020-02-03 15:44:52 DEBUG HqlSqlBaseWalker:128 - select : finishing up [level=1, statement=select]
+2020-02-03 15:44:52 DEBUG HqlSqlWalker:752 - processQuery() :  ( SELECT ( {select clause} movie0_.id ) ( FromClause{level=1} Movie movie0_ ) )
+2020-02-03 15:44:52 DEBUG JoinProcessor:128 - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Movie): [Movie]
+    |  +-IdentNode
+    |  | persister: SingleTableEntityPersister(com.dev.cinema.model.Movie)
+    |  | referencedTables: null
+    |  | originalText: generatedAlias0
+    |  \-SqlFragment
+    \-FromClause
+       \-FromElement
+
+2020-02-03 15:44:52 DEBUG JoinProcessor:295 - Using FROM fragment [Movie movie0_]
+2020-02-03 15:44:52 DEBUG HqlSqlBaseWalker:132 - select >> end [level=1, statement=select]
+2020-02-03 15:44:52 DEBUG QueryTranslatorImpl:275 - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (Movie)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'movie0_.id as id1_0_' {alias=generatedAlias0, className=com.dev.cinema.model.Movie, tableAlias=movie0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'movie0_.description as descript2_0_, movie0_.title as title3_0_'
+    \-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[movie0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'Movie movie0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=Movie,tableAlias=movie0_,origin=null,columns={,className=com.dev.cinema.model.Movie}}
+
+2020-02-03 15:44:52 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2020-02-03 15:44:52 DEBUG QueryTranslatorImpl:254 - HQL: select generatedAlias0 from com.dev.cinema.model.Movie as generatedAlias0
+2020-02-03 15:44:52 DEBUG QueryTranslatorImpl:255 - SQL: select movie0_.id as id1_0_, movie0_.description as descript2_0_, movie0_.title as title3_0_ from Movie movie0_
+2020-02-03 15:44:52 DEBUG ErrorTracker:97 - throwQueryException() : no errors
+2020-02-03 15:44:52 DEBUG SQL:127 - select movie0_.id as id1_0_, movie0_.description as descript2_0_, movie0_.title as title3_0_ from Movie movie0_
+2020-02-03 15:44:52 DEBUG Loader:384 - Result set row: 0
+2020-02-03 15:44:52 DEBUG Loader:1586 - Result row: EntityKey[com.dev.cinema.model.Movie#1]
+2020-02-03 15:44:52 DEBUG TwoPhaseLoad:178 - Resolving attributes for [com.dev.cinema.model.Movie#1]
+2020-02-03 15:44:52 DEBUG TwoPhaseLoad:190 - Processing attribute `description` : value = null
+2020-02-03 15:44:52 DEBUG TwoPhaseLoad:221 - Attribute (`description`)  - enhanced for lazy-loading? - false
+2020-02-03 15:44:52 DEBUG TwoPhaseLoad:190 - Processing attribute `title` : value = Fast and Furious
+2020-02-03 15:44:52 DEBUG TwoPhaseLoad:221 - Attribute (`title`)  - enhanced for lazy-loading? - false
+2020-02-03 15:44:52 DEBUG TwoPhaseLoad:342 - Done materializing entity [com.dev.cinema.model.Movie#1]
+2020-02-03 15:44:52 DEBUG LogicalConnectionManagedImpl:159 - Initiating JDBC connection release from afterTransaction
