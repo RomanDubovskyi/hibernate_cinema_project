@@ -6,6 +6,7 @@ import com.dev.cinema.exceptions.DataProcessingException;
 import com.dev.cinema.model.MovieSession;
 import com.dev.cinema.util.HibernateUtil;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.criteria.CriteriaQuery;
@@ -15,16 +16,11 @@ import org.hibernate.Transaction;
 
 @Dao
 public class MovieSessionDaoImpl implements MovieSessionDao {
+
+
     @Override
-    public List<MovieSession> getAll() throws DataProcessingException {
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
-            CriteriaQuery<MovieSession> criteriaQuery = session.getCriteriaBuilder()
-                    .createQuery(MovieSession.class);
-            criteriaQuery.from(MovieSession.class);
-            return session.createQuery(criteriaQuery).getResultList();
-        } catch (Exception e) {
-            throw new DataProcessingException("Error retrieving all MovieSessions " + e);
-        }
+    public List<MovieSession> findAvailableSessions(Long movieId, LocalDate date) {
+        return null;
     }
 
     @Override
