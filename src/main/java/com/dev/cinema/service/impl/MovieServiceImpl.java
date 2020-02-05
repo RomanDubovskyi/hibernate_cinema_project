@@ -1,13 +1,13 @@
 package com.dev.cinema.service.impl;
 
-import java.util.Collections;
-import java.util.List;
-
 import com.dev.cinema.annotations.Inject;
 import com.dev.cinema.dao.MovieDao;
 import com.dev.cinema.exceptions.DataProcessingException;
 import com.dev.cinema.model.Movie;
 import com.dev.cinema.service.MovieService;
+
+import java.util.List;
+
 import org.apache.log4j.Logger;
 
 public class MovieServiceImpl implements MovieService {
@@ -26,7 +26,7 @@ public class MovieServiceImpl implements MovieService {
             return movieDao.getAll();
         } catch (DataProcessingException e) {
             LOGGER.error("Can't get all Movies " + e);
+            throw new RuntimeException();
         }
-        return Collections.emptyList();
     }
 }
