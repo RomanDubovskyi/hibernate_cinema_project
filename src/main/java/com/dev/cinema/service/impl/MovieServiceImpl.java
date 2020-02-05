@@ -2,7 +2,6 @@ package com.dev.cinema.service.impl;
 
 import com.dev.cinema.annotations.Inject;
 import com.dev.cinema.dao.MovieDao;
-import com.dev.cinema.exceptions.DataProcessingException;
 import com.dev.cinema.model.Movie;
 import com.dev.cinema.service.MovieService;
 
@@ -22,11 +21,6 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public List<Movie> getAll() {
-        try {
-            return movieDao.getAll();
-        } catch (DataProcessingException e) {
-            LOGGER.error("Can't get all Movies " + e);
-            throw new RuntimeException();
-        }
+        return movieDao.getAll();
     }
 }
