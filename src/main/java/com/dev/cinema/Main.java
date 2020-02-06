@@ -54,8 +54,8 @@ public class Main {
 
         AuthenticationService authenticationService =
                 (AuthenticationService) injector.getInstance(AuthenticationService.class);
+        authenticationService.register("email11@gmail.com", "password");
         try {
-            authenticationService.register("email11@gmail.com", "password");
             System.out.println(authenticationService.login("email@gmail.com", "password"));
             System.out.println(authenticationService.login("email11@gmail.com", "password"));
         } catch (AuthenticationException e) {
