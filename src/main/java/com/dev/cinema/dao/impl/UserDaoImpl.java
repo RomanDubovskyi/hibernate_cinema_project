@@ -6,8 +6,6 @@ import com.dev.cinema.exceptions.DataProcessingException;
 import com.dev.cinema.model.User;
 import com.dev.cinema.util.HibernateUtil;
 
-import javax.persistence.NoResultException;
-
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
