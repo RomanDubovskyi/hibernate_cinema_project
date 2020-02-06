@@ -9,6 +9,7 @@ import com.dev.cinema.service.AuthenticationService;
 import com.dev.cinema.service.CinemaHallService;
 import com.dev.cinema.service.MovieService;
 import com.dev.cinema.service.MovieSessionService;
+import com.dev.cinema.service.ShoppingCartService;
 import com.dev.cinema.service.UserService;
 
 import java.time.LocalDate;
@@ -54,12 +55,19 @@ public class Main {
 
         AuthenticationService authenticationService =
                 (AuthenticationService) injector.getInstance(AuthenticationService.class);
-        authenticationService.register("email11@gmail.com", "password");
+        User user2 = authenticationService.register("email11@gmail.com", "password");
         try {
             System.out.println(authenticationService.login("email@gmail.com", "password"));
             System.out.println(authenticationService.login("email11@gmail.com", "password"));
         } catch (AuthenticationException e) {
             throw new RuntimeException();
         }
+
+        ShoppingCartService shoppingCartService =
+                (ShoppingCartService) injector.getInstance(ShoppingCartService.class);
+
+        shoppingCartService.addSession(movieSession, user2);
+        System.out.println(shoppingCartService.getByUser(user2));
+
     }
 }
