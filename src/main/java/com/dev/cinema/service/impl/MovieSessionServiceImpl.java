@@ -3,7 +3,6 @@ package com.dev.cinema.service.impl;
 import com.dev.cinema.annotations.Inject;
 import com.dev.cinema.annotations.Service;
 import com.dev.cinema.dao.MovieSessionDao;
-import com.dev.cinema.exceptions.DataProcessingException;
 import com.dev.cinema.model.MovieSession;
 import com.dev.cinema.service.MovieSessionService;
 
@@ -20,12 +19,7 @@ public class MovieSessionServiceImpl implements MovieSessionService {
 
     @Override
     public List<MovieSession> findAvailableSessions(Long movieId, LocalDate date) {
-        try {
-            return movieSessionDao.findAvailableSessions(movieId, date);
-        } catch (DataProcessingException e) {
-            LOGGER.error("Can't get MovieSessions with provided" + e);
-            throw new RuntimeException();
-        }
+        return movieSessionDao.findAvailableSessions(movieId, date);
     }
 
     @Override
