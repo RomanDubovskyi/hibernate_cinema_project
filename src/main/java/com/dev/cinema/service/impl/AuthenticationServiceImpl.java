@@ -4,6 +4,7 @@ import com.dev.cinema.annotations.Inject;
 import com.dev.cinema.annotations.Service;
 import com.dev.cinema.model.User;
 import com.dev.cinema.service.AuthenticationService;
+import com.dev.cinema.service.ShoppingCartService;
 import com.dev.cinema.service.UserService;
 import com.dev.cinema.util.HashUtil;
 
@@ -11,6 +12,8 @@ import javax.security.sasl.AuthenticationException;
 
 @Service
 public class AuthenticationServiceImpl implements AuthenticationService {
+    @Inject
+    ShoppingCartService shoppingCartService;
     @Inject
     UserService userService;
 
@@ -29,6 +32,8 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         User user = new User();
         user.setPassword(password);
         user.setEmail(email);
-        return userService.add(user);
+        userService.add(user);
+        shoppingCartService.registerNewShoppingCart(user);
+        return user;
     }
 }
