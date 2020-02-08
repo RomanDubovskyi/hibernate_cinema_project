@@ -9,10 +9,9 @@ import com.dev.cinema.service.AuthenticationService;
 import com.dev.cinema.service.CinemaHallService;
 import com.dev.cinema.service.MovieService;
 import com.dev.cinema.service.MovieSessionService;
+import com.dev.cinema.service.OrderService;
 import com.dev.cinema.service.ShoppingCartService;
-import com.dev.cinema.service.UserService;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import javax.security.sasl.AuthenticationException;
@@ -25,7 +24,10 @@ public class Main {
         movie.setTitle("Fast and Furious");
         MovieService movieService = (MovieService) injector.getInstance(MovieService.class);
         movieService.add(movie);
-        movieService.getAll().forEach(System.out::println);
+        Movie movie2 = new Movie();
+        movie2.setTitle("Star Wars");
+        movie2.setDescription("some description");
+        movieService.add(movie2);
 
         CinemaHallService cinemaHallService =
                 (CinemaHallService) injector.getInstance(CinemaHallService.class);
@@ -33,7 +35,10 @@ public class Main {
         cinemaHall.setCapacity(100);
         cinemaHall.setDescription("Premium Hall");
         cinemaHallService.add(cinemaHall);
-        System.out.println(cinemaHallService.getAll());
+        CinemaHall cinemaHall2 = new CinemaHall();
+        cinemaHall2.setCapacity(150);
+        cinemaHall2.setDescription("Basic Hall");
+        cinemaHallService.add(cinemaHall2);
 
         MovieSession movieSession = new MovieSession();
         movieSession.setShowTime(LocalDateTime.now());
@@ -42,19 +47,15 @@ public class Main {
         MovieSessionService movieSessionService =
                 (MovieSessionService) injector.getInstance(MovieSessionService.class);
         movieSessionService.add(movieSession);
-        movieSessionService.findAvailableSessions(movie.getId(), LocalDate.now())
-                .forEach(System.out::println);
-
-        User user = new User();
-        user.setEmail("email@gmail.com");
-        user.setPassword("password");
-        UserService userService =
-                (UserService) injector.getInstance(UserService.class);
-        userService.add(user);
-        System.out.println(userService.findByEmail("email@gmail.com"));
+        MovieSession movieSession2 = new MovieSession();
+        movieSession2.setShowTime(LocalDateTime.now());
+        movieSession2.setCinemaHall(cinemaHall2);
+        movieSession2.setMovie(movie2);
+        movieSessionService.add(movieSession2);
 
         AuthenticationService authenticationService =
                 (AuthenticationService) injector.getInstance(AuthenticationService.class);
+        User user = authenticationService.register("email@gmail.com", "password");
         User user2 = authenticationService.register("email11@gmail.com", "password");
         try {
             System.out.println(authenticationService.login("email@gmail.com", "password"));
@@ -67,7 +68,14 @@ public class Main {
                 (ShoppingCartService) injector.getInstance(ShoppingCartService.class);
 
         shoppingCartService.addSession(movieSession, user2);
-        System.out.println(shoppingCartService.getByUser(user2));
+        shoppingCartService.addSession(movieSession, user);
+
+        OrderService orderService =
+                (OrderService) injector.getInstance(OrderService.class);
+        orderService.completeOrder(shoppingCartService.getByUser(user2).getTickets(), user2);
+        shoppingCartService.addSession(movieSession2, user2);
+        orderService.completeOrder(shoppingCartService.getByUser(user2).getTickets(), user2);
+        orderService.getOrderHistory(user2).forEach(System.out::println);
 
     }
 }
