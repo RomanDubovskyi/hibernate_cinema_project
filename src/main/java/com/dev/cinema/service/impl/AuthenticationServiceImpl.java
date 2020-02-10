@@ -13,9 +13,9 @@ import javax.security.sasl.AuthenticationException;
 @Service
 public class AuthenticationServiceImpl implements AuthenticationService {
     @Inject
-    ShoppingCartService shoppingCartService;
+    private ShoppingCartService shoppingCartService;
     @Inject
-    UserService userService;
+    private UserService userService;
 
     @Override
     public User login(String email, String password) throws AuthenticationException {

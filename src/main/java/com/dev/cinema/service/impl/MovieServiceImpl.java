@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
 public class MovieServiceImpl implements MovieService {
     private static final Logger LOGGER = Logger.getLogger(MovieServiceImpl.class);
     @Inject
-    MovieDao movieDao;
+    private MovieDao movieDao;
 
     @Override
     public Movie add(Movie movie) {

@@ -8,13 +8,10 @@ import com.dev.cinema.service.CinemaHallService;
 
 import java.util.List;
 
-import org.apache.log4j.Logger;
-
 @Service
 public class CinemaHallServiceImpl implements CinemaHallService {
-    private static final Logger LOGGER = Logger.getLogger(CinemaHallServiceImpl.class);
     @Inject
-    CinemaHallDao cinemaHallDao;
+    private CinemaHallDao cinemaHallDao;
 
     @Override
     public CinemaHall add(CinemaHall cinemaHall) {
