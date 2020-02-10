@@ -15,7 +15,7 @@ import org.apache.log4j.Logger;
 public class MovieSessionServiceImpl implements MovieSessionService {
     private static final Logger LOGGER = Logger.getLogger(MovieSessionServiceImpl.class);
     @Inject
-    MovieSessionDao movieSessionDao;
+    private MovieSessionDao movieSessionDao;
 
     @Override
     public List<MovieSession> findAvailableSessions(Long movieId, LocalDate date) {
