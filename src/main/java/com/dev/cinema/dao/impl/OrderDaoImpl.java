@@ -1,24 +1,30 @@
 package com.dev.cinema.dao.impl;
 
-import com.dev.cinema.annotations.Dao;
 import com.dev.cinema.dao.OrderDao;
 import com.dev.cinema.exceptions.DataProcessingException;
 import com.dev.cinema.model.Order;
 import com.dev.cinema.model.User;
-import com.dev.cinema.util.HibernateUtil;
 
 import java.util.List;
 
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
 
-@Dao
+@Repository
 public class OrderDaoImpl implements OrderDao {
+    private final SessionFactory sessionFactory;
+
+    public OrderDaoImpl(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+
     @Override
     public Order add(Order order) {
         Transaction transaction = null;
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
             Long orderId = (Long) session.save(order);
             transaction.commit();
@@ -34,7 +40,7 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     public List<Order> getUserOrders(User user) {
-        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+        try (Session session = sessionFactory.openSession()) {
             Query<Order> query = session.createQuery("FROM Order  WHERE user = "
                     + ":user", Order.class);
             query.setParameter("user", user);
