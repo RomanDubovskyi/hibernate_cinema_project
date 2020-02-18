@@ -32,7 +32,7 @@ public class OrderController {
         this.shoppingCartService = shoppingCartService;
     }
 
-    @PostMapping(value = "/complete_order")
+    @PostMapping(value = "/complete-order")
     public void completeOrder(@RequestBody UserRequestDto userRequestDto) {
         User user = userService.findByEmail(userRequestDto.getEmail());
         ShoppingCart shoppingCart = shoppingCartService.getByUser(user);

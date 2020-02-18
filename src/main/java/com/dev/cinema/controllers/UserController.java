@@ -29,7 +29,7 @@ public class UserController {
         userService.add(newUser);
     }
 
-    @GetMapping(value = "/by_email")
+    @GetMapping(value = "/by-email")
     public UserResponseDto getAll(@RequestParam String email) {
         User user = userService.findByEmail(email);
         UserResponseDto userResponseDto = new UserResponseDto();
