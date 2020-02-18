@@ -10,4 +10,6 @@ public interface OrderDao {
 
     List<Order> getUserOrders(User user);
 
+    List<Order> getAll();
+
 }

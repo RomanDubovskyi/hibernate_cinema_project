@@ -39,6 +39,15 @@ public class CinemaHallDaoImpl implements CinemaHallDao {
     }
 
     @Override
+    public CinemaHall getById(Long id) {
+        try (Session session = sessionFactory.openSession()) {
+            return session.get(CinemaHall.class, id);
+        } catch (Exception e) {
+            throw new RuntimeException("Can't get cinemaHall by id", e);
+        }
+    }
+
+    @Override
     public List<CinemaHall> getAll() throws DataProcessingException {
         try (Session session = sessionFactory.openSession()) {
             CriteriaQuery<CinemaHall> criteriaQuery = session.getCriteriaBuilder()

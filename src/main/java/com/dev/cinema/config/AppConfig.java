@@ -1,7 +1,5 @@
 package com.dev.cinema.config;
 
-import com.dev.cinema.model.User;
-
 import java.util.Properties;
 
 import javax.sql.DataSource;
@@ -38,7 +36,7 @@ public class AppConfig {
                 + ".auto"));
 
         factoryBean.setHibernateProperties(properties);
-        factoryBean.setAnnotatedClasses(User.class);
+        factoryBean.setPackagesToScan("com.dev.cinema.model");
         return factoryBean;
     }
 
