@@ -31,11 +31,11 @@ public class CinemaHallController {
     }
 
     @PostMapping(value = "/add")
-    public void addCinemaHall(@RequestBody CinemaHallRequestDto cinemaHallRequestDto) {
+    public CinemaHall addCinemaHall(@RequestBody CinemaHallRequestDto cinemaHallRequestDto) {
         CinemaHall newCinemaHall = new CinemaHall();
         newCinemaHall.setDescription(cinemaHallRequestDto.getDescription());
         newCinemaHall.setCapacity(cinemaHallRequestDto.getCapacity());
-        cinemaHallService.add(newCinemaHall);
+        return cinemaHallService.add(newCinemaHall);
     }
 
     private CinemaHallResponseDto transferCinemaHallToDto(CinemaHall cinemaHall) {

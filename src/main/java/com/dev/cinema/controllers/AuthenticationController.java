@@ -1,5 +1,6 @@
 package com.dev.cinema.controllers;
 
+import com.dev.cinema.model.User;
 import com.dev.cinema.model.dto.UserRequestDto;
 import com.dev.cinema.service.AuthenticationService;
 
@@ -22,8 +23,8 @@ public class AuthenticationController {
     }
 
     @PostMapping("/register")
-    public void registerUser(@RequestBody UserRequestDto userRequestDto) {
-        authenticationService.register(userRequestDto.getEmail(),
+    public User registerUser(@RequestBody UserRequestDto userRequestDto) {
+        return authenticationService.register(userRequestDto.getEmail(),
                 userRequestDto.getPassword());
     }
 

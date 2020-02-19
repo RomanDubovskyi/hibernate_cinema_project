@@ -31,11 +31,11 @@ public class MovieController {
     }
 
     @PostMapping(value = "/add")
-    public void addMovie(@RequestBody MovieRequestDto movieRequestDto) {
+    public Movie addMovie(@RequestBody MovieRequestDto movieRequestDto) {
         Movie newMovie = new Movie();
         newMovie.setDescription(movieRequestDto.getDescription());
         newMovie.setTitle(movieRequestDto.getTitle());
-        movieService.add(newMovie);
+        return movieService.add(newMovie);
     }
 
     private MovieResponseDto transferMovieToDto(Movie movie) {

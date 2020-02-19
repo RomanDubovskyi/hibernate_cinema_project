@@ -59,9 +59,4 @@ public class MovieSessionDaoImpl implements MovieSessionDao {
             throw new RuntimeException("Can't insert MovieSession entity", e);
         }
     }
-
-    @Override
-    public MovieSession getById(Long id) {
-        return null;
-    }
 }

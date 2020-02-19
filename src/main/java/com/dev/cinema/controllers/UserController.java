@@ -22,11 +22,11 @@ public class UserController {
     }
 
     @PostMapping(value = "/add")
-    public void addUser(@RequestBody UserRequestDto userRequestDto) {
+    public User addUser(@RequestBody UserRequestDto userRequestDto) {
         User newUser = new User();
         newUser.setEmail(userRequestDto.getEmail());
         newUser.setPassword(userRequestDto.getPassword());
-        userService.add(newUser);
+        return userService.add(newUser);
     }
 
     @GetMapping(value = "/by-email")

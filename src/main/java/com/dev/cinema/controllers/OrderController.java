@@ -1,5 +1,6 @@
 package com.dev.cinema.controllers;
 
+import com.dev.cinema.model.Order;
 import com.dev.cinema.model.ShoppingCart;
 import com.dev.cinema.model.Ticket;
 import com.dev.cinema.model.User;
@@ -33,11 +34,10 @@ public class OrderController {
     }
 
     @PostMapping(value = "/complete-order")
-    public void completeOrder(@RequestBody UserRequestDto userRequestDto) {
+    public Order completeOrder(@RequestBody UserRequestDto userRequestDto) {
         User user = userService.findByEmail(userRequestDto.getEmail());
         ShoppingCart shoppingCart = shoppingCartService.getByUser(user);
-        orderService.completeOrder(shoppingCart.getTickets(), user);
-        shoppingCartService.clearShoppingCart(shoppingCart);
+        return orderService.completeOrder(shoppingCart.getTickets(), user);
     }
 
     @GetMapping(value = "/all")
