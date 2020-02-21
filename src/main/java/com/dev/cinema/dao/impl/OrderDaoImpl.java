@@ -7,6 +7,8 @@ import com.dev.cinema.model.User;
 
 import java.util.List;
 
+import javax.persistence.criteria.CriteriaQuery;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -47,6 +49,18 @@ public class OrderDaoImpl implements OrderDao {
             return query.getResultList();
         } catch (Exception e) {
             throw new DataProcessingException("Cannot find OrderList using user " + e);
+        }
+    }
+
+    @Override
+    public List<Order> getAll() {
+        try (Session session = sessionFactory.openSession()) {
+            CriteriaQuery<Order> criteriaQuery = session.getCriteriaBuilder()
+                    .createQuery(Order.class);
+            criteriaQuery.from(Order.class);
+            return session.createQuery(criteriaQuery).getResultList();
+        } catch (Exception e) {
+            throw new DataProcessingException("Error retrieving all orders " + e);
         }
     }
 }
