@@ -1,5 +1,6 @@
 package com.dev.cinema.controllers;
 
+import com.dev.cinema.annotations.EmailValidation;
 import com.dev.cinema.exceptions.DataProcessingException;
 import com.dev.cinema.model.User;
 import com.dev.cinema.model.dto.UserRegistrationDto;
@@ -7,6 +8,7 @@ import com.dev.cinema.model.dto.UserRequestDto;
 import com.dev.cinema.service.AuthenticationService;
 
 import javax.security.sasl.AuthenticationException;
+import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,7 +27,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/register")
-    public User registerUser(@RequestBody UserRegistrationDto userDto) {
+    public User registerUser(@RequestBody @Valid UserRegistrationDto userDto) {
         if (!userDto.getPassword().equals(userDto.getRepeatPassword())) {
             throw new DataProcessingException("Passwords doesn't match");
         }
