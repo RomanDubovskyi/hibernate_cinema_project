@@ -1,7 +1,5 @@
 package com.dev.cinema.controllers;
 
-import com.dev.cinema.annotations.EmailValidation;
-import com.dev.cinema.exceptions.DataProcessingException;
 import com.dev.cinema.model.User;
 import com.dev.cinema.model.dto.UserRegistrationDto;
 import com.dev.cinema.model.dto.UserRequestDto;
@@ -28,9 +26,6 @@ public class AuthenticationController {
 
     @PostMapping("/register")
     public User registerUser(@RequestBody @Valid UserRegistrationDto userDto) {
-        if (!userDto.getPassword().equals(userDto.getRepeatPassword())) {
-            throw new DataProcessingException("Passwords doesn't match");
-        }
         return authenticationService.register(userDto.getEmail(),
                 userDto.getPassword());
     }

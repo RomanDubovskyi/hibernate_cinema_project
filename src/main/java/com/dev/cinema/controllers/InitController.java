@@ -7,9 +7,9 @@ import com.dev.cinema.service.UserService;
 
 import javax.annotation.PostConstruct;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class InitController {
     private final UserService userService;
     private final RoleDao roleDao;

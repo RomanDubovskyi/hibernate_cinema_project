@@ -13,6 +13,8 @@ import com.dev.cinema.service.UserService;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,7 +36,7 @@ public class OrderController {
     }
 
     @PostMapping(value = "/complete-order")
-    public Order completeOrder(@RequestBody UserRequestDto userRequestDto) {
+    public Order completeOrder(@RequestBody @Valid UserRequestDto userRequestDto) {
         User user = userService.findByEmail(userRequestDto.getEmail());
         ShoppingCart shoppingCart = shoppingCartService.getByUser(user);
         return orderService.completeOrder(shoppingCart.getTickets(), user);

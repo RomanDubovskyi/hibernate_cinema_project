@@ -1,10 +1,12 @@
 package com.dev.cinema.model.dto;
 
 import com.dev.cinema.annotations.EmailValidation;
+import com.dev.cinema.annotations.PasswordValidation;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+@PasswordValidation
 public class UserRegistrationDto {
     @NotNull
     @EmailValidation
