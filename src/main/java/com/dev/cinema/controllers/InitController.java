@@ -1,29 +1,29 @@
 package com.dev.cinema.controllers;
 
-import com.dev.cinema.dao.RoleDao;
 import com.dev.cinema.model.Role;
 import com.dev.cinema.model.User;
+import com.dev.cinema.service.RoleService;
 import com.dev.cinema.service.UserService;
 
 import javax.annotation.PostConstruct;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class InitController {
     private final UserService userService;
-    private final RoleDao roleDao;
+    private final RoleService roleService;
 
-    public InitController(UserService userService, RoleDao roleDao) {
+    public InitController(UserService userService, RoleService roleService) {
         this.userService = userService;
-        this.roleDao = roleDao;
+        this.roleService = roleService;
     }
 
     @PostConstruct
     public Role injectRole() {
         Role role = new Role();
         role.setRoleName("USER");
-        roleDao.add(role);
+        roleService.add(role);
         return role;
     }
 
@@ -32,7 +32,7 @@ public class InitController {
         User user = new User();
         user.setPassword("user");
         user.setEmail("user@gmail.com");
-        user.getRoles().add(roleDao.getByName("USER"));
+        user.getRoles().add(roleService.getByName("USER"));
         userService.add(user);
         return user;
     }
