@@ -15,6 +15,8 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -41,7 +43,7 @@ public class ShoppingCartController {
 
     @PostMapping(value = "/add-movie-session")
     public ShoppingCart addMovieSessionToCart(
-            @RequestBody MovieSessionRequestDto movieSessionRequestDto,
+            @RequestBody @Valid MovieSessionRequestDto movieSessionRequestDto,
                                       @RequestParam Long userId) {
         MovieSession movieSession = transferDtoToMovieSession(movieSessionRequestDto);
         User user = userService.getById(userId);

@@ -1,10 +1,12 @@
 package com.dev.cinema.controllers;
 
 import com.dev.cinema.model.User;
+import com.dev.cinema.model.dto.UserRegistrationDto;
 import com.dev.cinema.model.dto.UserRequestDto;
 import com.dev.cinema.service.AuthenticationService;
 
 import javax.security.sasl.AuthenticationException;
+import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,9 +25,9 @@ public class AuthenticationController {
     }
 
     @PostMapping("/register")
-    public User registerUser(@RequestBody UserRequestDto userRequestDto) {
-        return authenticationService.register(userRequestDto.getEmail(),
-                userRequestDto.getPassword());
+    public User registerUser(@RequestBody @Valid UserRegistrationDto userDto) {
+        return authenticationService.register(userDto.getEmail(),
+                userDto.getPassword());
     }
 
     @PostMapping("/login")
